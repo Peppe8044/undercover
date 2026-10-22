@@ -328,30 +328,30 @@ This replaces the health page.
 
 **Success criteria:**
 
-- [ ] **Unit tests.** Vitest tests cover:
+- [x] **Unit tests.** Vitest tests cover:
   - a waiting claim
   - a decided claim with its reason
   - a claim waiting for sign-off that is signed off
   - the steps list
-- [ ] **Claim in the browser.** `#/claims/CLM-1001` shows:
+- [x] **Claim in the browser.** `#/claims/CLM-1001` shows:
   - the story
   - three items
   - four documents
   - the Premium policy
   - the earlier claim CLM-0412
-- [ ] **Steps while the agent works.** Calling the API as the agent does, the browser shows each step soon after it is added, with no reload:
+- [x] **Steps while the agent works.** Calling the API as the agent does, the browser shows each step soon after it is added, with no reload:
   - start CLM-1001
   - add steps
   - approve $420.00
   - pay
-- [ ] **The finished claim.** The claim then shows Decided, the reason, the policy section and "Paid $420.00".
-- [ ] **Sign-off in the browser.**
+- [x] **The finished claim.** The claim then shows Decided, the reason, the policy section and "Paid $420.00".
+- [x] **Sign-off in the browser.**
   - Approve CLM-1002 at $1,150.00 through the API.
   - The page shows "Waiting for sign-off".
   - A payment through the API is refused.
   - Signing off as Priya Raman in the browser shows Decided, "Paid $1,150.00" and her name.
-- [ ] **Reseed.** `uv run -m backend.seed` resets the queue after these checks.
-- [ ] `npm run check:ts` passes with coverage of 80% or more.
+- [x] **Reseed.** `uv run -m backend.seed` resets the queue after these checks.
+- [x] `npm run check:ts` passes with coverage of 80% or more.
 
 ## Phase 6: end-to-end tests, a live run and handover
 

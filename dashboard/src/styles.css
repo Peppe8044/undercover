@@ -229,3 +229,193 @@ tbody tr:nth-child(odd) {
   border-radius: 14px;
   padding: 0.75rem 1rem;
 }
+
+h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1rem;
+}
+
+.claim-head {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.claim-head h1 {
+  margin: 0;
+}
+
+.lead {
+  font-family: var(--serif);
+  font-size: 1.5rem;
+  margin: 0.25rem 0 1.5rem;
+}
+
+.columns {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .columns {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.column {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+}
+
+.column > .panel h2 {
+  margin-bottom: 0.75rem;
+}
+
+.facts {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 0.35rem 1.25rem;
+  margin: 0;
+}
+
+.facts dt {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.facts dd {
+  margin: 0;
+}
+
+.decision-value {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.reason {
+  margin: 1rem 0 0;
+  padding: 0.85rem 1rem;
+  border-radius: 10px;
+  background: var(--panel-soft);
+}
+
+.story {
+  margin: 0;
+}
+
+.document h3 {
+  margin-top: 0.75rem;
+}
+
+.document p {
+  margin: 0;
+}
+
+.sign-off {
+  display: grid;
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+  padding: 1rem;
+  border-radius: 10px;
+  background: var(--panel-soft);
+}
+
+.sign-off h3,
+.sign-off p {
+  margin: 0;
+}
+
+.sign-off label {
+  display: grid;
+  gap: 0.35rem;
+  font-weight: 600;
+}
+
+select,
+button {
+  font: inherit;
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+}
+
+select {
+  border: none;
+  background: var(--panel);
+  color: var(--ink);
+}
+
+button {
+  border: none;
+  background: var(--sea-green);
+  color: var(--midnight);
+  font-weight: 700;
+  cursor: pointer;
+  justify-self: start;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.steps {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.step {
+  padding: 0.6rem 0.8rem;
+  border-radius: 10px;
+  background: var(--panel-soft);
+}
+
+.step-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  font-size: 0.8rem;
+}
+
+.step-kind {
+  font-weight: 700;
+}
+
+.step-tool_call .step-kind {
+  color: var(--link);
+}
+
+.step-model .step-kind {
+  color: var(--heading-accent);
+}
+
+.step-text {
+  margin: 0.25rem 0 0;
+  overflow-wrap: anywhere;
+}
+
+.step-tool_call .step-text {
+  font-family: var(--mono);
+  font-size: 0.85rem;
+}
+
+details summary {
+  cursor: pointer;
+  font-family: var(--mono);
+  font-size: 0.8rem;
+  overflow-wrap: anywhere;
+}
+
+.step-detail {
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  margin: 0.5rem 0 0;
+}

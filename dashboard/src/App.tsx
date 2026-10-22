@@ -1,9 +1,12 @@
+import { ClaimPage } from "./ClaimPage";
 import { useHash } from "./hooks";
 import { Instructions } from "./Instructions";
 import { Queue } from "./Queue";
 
 function Page({ hash }: Readonly<{ hash: string }>) {
   if (hash === "#/instructions") return <Instructions />;
+  const claimId = /^#\/claims\/([^/]+)$/.exec(hash)?.[1];
+  if (claimId) return <ClaimPage key={claimId} claimId={claimId} />;
   return <Queue />;
 }
 

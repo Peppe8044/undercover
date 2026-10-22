@@ -1,6 +1,6 @@
 # Status
 
-The pilot is being built from `docs/PLAN.md`. Phases 1 to 4 of 6 are done.
+The pilot is being built from `docs/PLAN.md`. Phases 1 to 5 of 6 are done.
 
 ## Built
 
@@ -17,6 +17,8 @@ The pilot is being built from `docs/PLAN.md`. Phases 1 to 4 of 6 are done.
   - `uv run -m agent` works every waiting claim; `uv run -m agent CLM-1001 CLM-1003` works the claims named.
 - `dashboard/`: React, Vite and TypeScript, styled to `docs/BRAND.md` in light and dark.
   - The queue at `#/`: counts by state and every claim with its state, decision and payout, refreshed every two seconds.
+  - Each claim at `#/claims/CLM-1001`: the claim in full, the policy, the customer's earlier claims, the agent's decision and payment, and its steps, refreshed every second.
+  - The sign-off panel on a claim waiting for sign-off: pick a handler and "Sign off and pay".
   - The agent's instructions at `#/instructions`, read only.
 - `e2e/`: one test that the dashboard opens on the queue.
 
