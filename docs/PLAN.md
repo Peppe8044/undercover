@@ -262,17 +262,17 @@ Errors:
 
 **Success criteria:**
 
-- [ ] **Approval up to the limit.**
+- [x] **Approval up to the limit.**
   - With a stub model scripted to read CLM-1001, approve $420.00 and pay, `run()` leaves the claim `decided` and paid.
   - Its steps show each tool call and result in order.
-- [ ] **Over the limit.**
+- [x] **Over the limit.**
   - With a stub model scripted to approve CLM-1002 at $1,150.00 and then pay, the payment is refused.
   - The refusal appears as a tool result in the steps, and the claim is `waiting_for_sign_off` and unpaid.
-- [ ] **Decline.** With a stub model scripted to decline, the claim is `decided` with payout 0.
-- [ ] **Queue runner.** With `run` replaced by a stub, `uv run -m agent` picks up only waiting claims, and named claim ids pick up only those.
-- [ ] **Model choice.** The default model is still `openai/gpt-6-luna` at low reasoning, and `MODEL_NAME` overrides it. The existing test keeps passing.
-- [ ] **No local data.** A search for `data/` in `agent/` finds nothing.
-- [ ] `npm run check:python` passes with coverage of 80% or more.
+- [x] **Decline.** With a stub model scripted to decline, the claim is `decided` with payout 0.
+- [x] **Queue runner.** With `run` replaced by a stub, `uv run -m agent` picks up only waiting claims, and named claim ids pick up only those.
+- [x] **Model choice.** The default model is still `openai/gpt-6-luna` at low reasoning, and `MODEL_NAME` overrides it. The existing test keeps passing.
+- [x] **No local data.** A search for `data/` in `agent/` finds nothing.
+- [x] `npm run check:python` passes with coverage of 80% or more.
 
 ## Phase 4: the dashboard's queue and instructions
 
