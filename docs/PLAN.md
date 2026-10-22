@@ -177,22 +177,22 @@ Errors:
 
 **Success criteria:**
 
-- [ ] `uv run -m backend.seed` creates `backend/undercover.db` and reports 25 claims, 50 policies, 49 customers and 3 handlers.
-- [ ] `GET /api/claims` returns 25 claims, CLM-1001 to CLM-1025. Every one is `waiting`, with no decision.
-- [ ] `GET /api/claims/CLM-1001` returns:
+- [x] `uv run -m backend.seed` creates `backend/undercover.db` and reports 25 claims, 50 policies, 49 customers and 3 handlers.
+- [x] `GET /api/claims` returns 25 claims, CLM-1001 to CLM-1025. Every one is `waiting`, with no decision.
+- [x] `GET /api/claims/CLM-1001` returns:
   - the story
   - three items totaling $420.00
   - four documents
   - state `waiting`
-- [ ] `GET /api/policies/POL-2001` returns the Premium plan with a $50.00 deductible.
-- [ ] `GET /api/customers/CUS-3001` returns Maya Patel, with earlier claim CLM-0412.
-- [ ] `GET /api/handlers` returns Dana Whitfield, Marcus Oyelaran and Priya Raman.
-- [ ] `GET /api/instructions` returns text that contains "Version 2026.1" from the policy wording. The text does not mention the claims manual.
-- [ ] An unknown claim, policy or customer id answers 404.
-- [ ] A test checks the OpenAPI schema. Every operation has an `operation_id`, a one-line description and only required inputs.
-- [ ] A test checks the seeded claim ids are exactly CLM-1001 to CLM-1025, so nothing from `data/evals/` or `data/security/` gets in.
-- [ ] Deleting the database file and starting the backend seeds it again.
-- [ ] `npm run check:python` passes with coverage of 80% or more.
+- [x] `GET /api/policies/POL-2001` returns the Premium plan with a $50.00 deductible.
+- [x] `GET /api/customers/CUS-3001` returns Maya Patel, with earlier claim CLM-0412.
+- [x] `GET /api/handlers` returns Dana Whitfield, Marcus Oyelaran and Priya Raman.
+- [x] `GET /api/instructions` returns text that contains "Version 2026.1" from the policy wording. The text does not mention the claims manual.
+- [x] An unknown claim, policy or customer id answers 404.
+- [x] A test checks the OpenAPI schema. Every operation has an `operation_id`, a one-line description and only required inputs.
+- [x] A test checks the seeded claim ids are exactly CLM-1001 to CLM-1025, so nothing from `data/evals/` or `data/security/` gets in.
+- [x] Deleting the database file and starting the backend seeds it again.
+- [x] `npm run check:python` passes with coverage of 80% or more.
 
 ## Phase 2: the claim workflow and the $1,000 rule
 
