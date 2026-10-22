@@ -372,9 +372,9 @@ This replaces the health page.
 
 **Success criteria:**
 
-- [ ] `npm run e2e` passes. It passes again on a second run, because each run starts from a fresh database.
-- [ ] `npm run e2e` passes while `npm run dev` is also running, and the dev queue is unchanged.
-- [ ] **Live run on the student's OpenRouter key.** This calls the model and costs a few cents.
+- [x] `npm run e2e` passes. It passes again on a second run, because each run starts from a fresh database.
+- [x] `npm run e2e` passes while `npm run dev` is also running, and the dev queue is unchanged.
+- [x] **Live run on the student's OpenRouter key.** This calls the model and costs a few cents.
   - Reseed, run `npm run dev`, then run `uv run -m agent CLM-1001 CLM-1003`.
   - The dashboard shows the steps as each claim is worked.
   - Each claim ends either `decided` or `waiting_for_sign_off`, with:
@@ -383,9 +383,9 @@ This replaces the health page.
     - a policy section
     - a payout when approved
   - Any approval over $1,000 shows a refused payment in its steps and waits for sign-off.
-- [ ] **Reseed after the live run.** `uv run -m backend.seed` resets the queue afterwards.
-- [ ] **Status file.** `docs/STATUS.md` describes:
+- [x] **Reseed after the live run.** `uv run -m backend.seed` resets the queue afterwards.
+- [x] **Status file.** `docs/STATUS.md` describes:
   - the backend, the agent and the dashboard
   - the claim states and the sign-off rule
   - the commands `npm run dev`, `uv run -m agent`, `uv run -m backend.seed` and `npm run check`
-- [ ] `npm run check` passes: ruff, pyright, pytest, ESLint, Prettier, tsc, vitest and Playwright.
+- [x] `npm run check` passes: ruff, pyright, pytest, ESLint, Prettier, tsc, vitest and Playwright.
