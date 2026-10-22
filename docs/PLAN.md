@@ -211,25 +211,25 @@ Errors:
 
 **Success criteria:**
 
-- [ ] **Start.** `start_claim` moves a waiting claim to `in_progress` and records the thread id. A second call answers 409.
-- [ ] **Steps.** `add_step` then `list_steps` returns the steps in the order they were added, each with a time.
-- [ ] **Decline.** A decline with payout 0 moves the claim to `decided`. A decline with a payout answers 422.
-- [ ] **Approval up to the limit.**
+- [x] **Start.** `start_claim` moves a waiting claim to `in_progress` and records the thread id. A second call answers 409.
+- [x] **Steps.** `add_step` then `list_steps` returns the steps in the order they were added, each with a time.
+- [x] **Decline.** A decline with payout 0 moves the claim to `decided`. A decline with a payout answers 422.
+- [x] **Approval up to the limit.**
   - An approval of $420.00 moves the claim to `decided`.
   - `pay_claim` with 420.00 records the payment.
   - A second payment answers 409.
   - A payment of the wrong amount answers 422.
-- [ ] **Exactly the limit.** An approval of exactly $1,000.00 moves the claim to `decided`, and paying it succeeds.
-- [ ] **Over the limit.**
+- [x] **Exactly the limit.** An approval of exactly $1,000.00 moves the claim to `decided`, and paying it succeeds.
+- [x] **Over the limit.**
   - An approval of $1,150.00 moves the claim to `waiting_for_sign_off`.
   - `pay_claim` answers 403, with a message that the payment waits for a handler's sign-off, and nothing is paid.
-- [ ] **Sign-off.**
+- [x] **Sign-off.**
   - `sign_off_claim` with HND-01 on that claim records Dana Whitfield, pays $1,150.00 and moves the claim to `decided`.
   - An unknown handler answers 404.
   - Signing off a claim that is not waiting for sign-off answers 409.
-- [ ] **Final decisions.** `decide_claim` on a decided claim answers 409.
-- [ ] **Reseed.** `uv run -m backend.seed` returns every claim to `waiting` and clears its steps.
-- [ ] `npm run check:python` passes with coverage of 80% or more.
+- [x] **Final decisions.** `decide_claim` on a decided claim answers 409.
+- [x] **Reseed.** `uv run -m backend.seed` returns every claim to `waiting` and clears its steps.
+- [x] `npm run check:python` passes with coverage of 80% or more.
 
 ## Phase 3: the UnderCover Agent
 
