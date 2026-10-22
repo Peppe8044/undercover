@@ -294,18 +294,18 @@ This replaces the health page.
 
 **Success criteria:**
 
-- [ ] **Unit tests.** Vitest tests cover:
+- [x] **Unit tests.** Vitest tests cover:
   - the queue rendering from a stubbed fetch
   - the state counts
   - money formatting
   - the instructions page
   - an error message when the backend is down
-- [ ] **Queue in the browser.** With `npm run dev` and a fresh seed, checked with the Playwright MCP server:
+- [x] **Queue in the browser.** With `npm run dev` and a fresh seed, checked with the Playwright MCP server:
   - `http://localhost:5173` shows 25 claims, all Waiting.
   - CLM-1001 shows $420.00.
-- [ ] **Instructions in the browser.** `#/instructions` shows the instructions and the policy wording, with no way to edit them.
-- [ ] **Dark theme.** The page follows the brand in dark mode: background `#04232E` and black panels.
-- [ ] `npm run check:ts` passes with coverage of 80% or more.
+- [x] **Instructions in the browser.** `#/instructions` shows the instructions and the policy wording, with no way to edit them.
+- [x] **Dark theme.** The page follows the brand in dark mode: background `#04232E` and black panels.
+- [x] `npm run check:ts` passes with coverage of 80% or more.
 
 ## Phase 5: the dashboard's claim page, the agent's steps and sign-off
 

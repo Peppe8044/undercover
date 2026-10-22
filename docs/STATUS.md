@@ -1,6 +1,6 @@
 # Status
 
-The pilot is being built from `docs/PLAN.md`. Phases 1 to 3 of 6 are done.
+The pilot is being built from `docs/PLAN.md`. Phases 1 to 4 of 6 are done.
 
 ## Built
 
@@ -15,8 +15,10 @@ The pilot is being built from `docs/PLAN.md`. Phases 1 to 3 of 6 are done.
   - Its tools call the API: `get_claim`, `get_policy`, `get_customer`, `decide_claim` and `pay_claim`. A refusal comes back to the model as text.
   - `run(claim_id, thread_id)` fetches the instructions, starts the claim, and posts each step to the backend as it works.
   - `uv run -m agent` works every waiting claim; `uv run -m agent CLM-1001 CLM-1003` works the claims named.
-- `dashboard/`: the hello-world skeleton, still to be built.
-- `e2e/`: one test of the skeleton page.
+- `dashboard/`: React, Vite and TypeScript, styled to `docs/BRAND.md` in light and dark.
+  - The queue at `#/`: counts by state and every claim with its state, decision and payout, refreshed every two seconds.
+  - The agent's instructions at `#/instructions`, read only.
+- `e2e/`: one test that the dashboard opens on the queue.
 
 ## Running it
 
